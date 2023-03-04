@@ -1,3 +1,4 @@
+
 //step 1
 const fs = require('fs');
 fs.readFile('file.txt', 'utf8', function (err, data) {
@@ -37,4 +38,18 @@ https.get('https://jsonplaceholder.typicode.com/posts/1', (resp) => {
 //step 5
 const myModule = require('./my-module.js');
 console.log(myModule.myFunction());
+
+//step 6
+const myPromise = new Promise((resolve, reject) => {
+    if (condition) {
+    resolve('Success!');
+    } else {
+    reject('Failure!');
+    }
+   });
+   myPromise.then((result) => {
+    console.log(result);
+   }).catch((error) => {
+    console.log(error);
+   });
 
