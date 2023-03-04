@@ -34,4 +34,7 @@ https.get('https://jsonplaceholder.typicode.com/posts/1', (resp) => {
  console.log("Error: " + err.message);
 });
 
+//step 5
+const myModule = require('./my-module.js');
+console.log(myModule.myFunction());
 
